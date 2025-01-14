@@ -1,0 +1,33 @@
+{
+  "name": "occu",
+  "version": "1.0.0",
+  "description": "occu test project",
+  "main": "app.js",
+  "scripts": {
+    "serve": "npm run clean:dev && npm run cpdir:dev && esbuild src/index.jsx --bundle --sourcemap --outfile=build/bundle.js --define:IS_PRODUCTION=false --target=chrome58,firefox57,safari11,edge18 --watch --servedir=build",
+    "build": "npm run clean:dev && npm run cpdir:dev && esbuild src/index.jsx --bundle --sourcemap --outfile=build/bundle.js --define:IS_PRODUCTION=false --target=chrome58,firefox57,safari11,edge18",
+    "build:prod": "npm run clean:prod && npm run cpdir:prod && esbuild src/index.jsx --outfile=dist/bundle.js --bundle --minify --sourcemap --target=chrome58,firefox57,safari11,edge18",
+    "clean:dev": "rimraf build",
+    "clean:prod": "rimraf dist",
+    "cpdir:dev": "npx copyfiles -u 1 public/**/*.* build",
+    "cpdir:prod": "npx copyfiles -u 1 public/**/*.* dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "esbuild": "0.24.2",
+    "rimraf": "^6.0.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "react": "^19.0.0",
+    "react-bootstrap": "^2.10.7",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.4.0",
+    "react-router-dom": "^7.1.1",
+    "styled-components": "^6.1.14"
+  }
+}
