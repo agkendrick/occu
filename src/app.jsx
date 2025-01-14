@@ -17,7 +17,7 @@ export default function App() {
                 <Container>
                     <Navbar.Brand>OCCU</Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link className={hash == "" ? 'active' : ''} href="/#statuses">Statuses</Nav.Link>
+                        <Nav.Link className={hash == "" ? 'active' : ''} href="#statuses">Statuses</Nav.Link>
                         <Nav.Link href="#states">States</Nav.Link>
                     </Nav>
                 </Container>
