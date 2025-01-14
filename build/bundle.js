@@ -29473,7 +29473,7 @@
         setEditItem(__spreadProps(__spreadValues({}, filteredItems[key]), { name: key }));
         setShowEditModal(true);
       } }, /* @__PURE__ */ import_react67.default.createElement(FaPencilAlt, null)), /* @__PURE__ */ import_react67.default.createElement(Button_default2, { variant: "secondary", onClick: () => copyItem(key, filteredItems[key]) }, /* @__PURE__ */ import_react67.default.createElement(FaCopy, null))));
-    })), /* @__PURE__ */ import_react67.default.createElement(
+    })), showCreateModal && /* @__PURE__ */ import_react67.default.createElement(
       CreateModal,
       {
         existingNames: Object.keys(items),

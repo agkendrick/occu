@@ -117,12 +117,12 @@ export default function States() {
                 }
             </StateList>
 
-            <CreateModal
+            { showCreateModal && <CreateModal
                 existingNames={Object.keys(items)}
                 createItem={(key, value) => setItems({...items, [key]: value}) }
                 show={showCreateModal}
                 onHide={() => setShowCreateModal(false)}
-            />
+            /> }
 
             { showEditModal && <EditModal
                 existingNames={Object.keys(items)}
